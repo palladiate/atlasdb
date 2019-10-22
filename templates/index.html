@@ -1,0 +1,30 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atlas DB</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-grid.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-reboot.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 font-weight-bold">Island</div>
+        <div class="col-lg-3 font-weight-bold">Resource</div>
+    </div>
+    {{range .}}
+    <div class="row">
+        <div class="col-3">
+            {{.Name}}
+        </div>
+        <div class="col-3">
+            {{.Resource}}
+        </div>
+    </div>
+    {{end}}
+</div>
+</body>
+</html>
+{{end}}
